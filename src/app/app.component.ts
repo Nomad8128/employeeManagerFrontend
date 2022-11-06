@@ -4,6 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { AddComponent } from './add/add.component';
 import { DetailComponent } from './detail/detail.component';
+import { EditComponent } from './edit/edit.component';
 import { Employee } from './employee';
 import { EmployeeService } from './employee.service';
 
@@ -62,4 +63,14 @@ export class AppComponent implements OnInit{
         return this.employeeService.getEmployees().subscribe(res => this.dataSource.data=res)
       }
     );}
+
+  edit(employee: any) {
+    this.dialog.open(EditComponent, {
+      width: '30%',
+      data: {
+        worker: employee,
+        tableData: this.dataSource
+      }
+    });
+  }
 }
