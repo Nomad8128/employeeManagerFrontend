@@ -12,5 +12,4 @@ export interface Employee {
   annual_leave_days: number;
   vacation_days: number;
   paid_leave_days: number;
-
 }

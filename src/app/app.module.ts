@@ -17,11 +17,15 @@ import { MatInputModule } from "@angular/material/input";
 import { MatSortModule } from '@angular/material/sort';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
+import { AddComponent } from './add/add.component';
+import { MatRadioModule } from '@angular/material/radio';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetailComponent
+    DetailComponent,
+    AddComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,8 @@ import { MatCardModule } from '@angular/material/card';
     MatInputModule,
     MatSortModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

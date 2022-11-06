@@ -1,0 +1,59 @@
+<h1 mat-dialog-title>Add new employee</h1>
+<div mat-dialog-content>
+  <form [formGroup]="projectForm" #addForm="ngForm">
+    <mat-form-field appearance="outline">
+      <mat-label>First name</mat-label>
+      <input required formControlName="firstName" matInput placeholder="Enter first name" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Last name</mat-label>
+      <input required  formControlName="lastName" matInput placeholder="Enter last name"/>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Picture URL</mat-label>
+      <input required formControlName="picture" matInput placeholder="Enter picture URL"/>
+    </mat-form-field>
+    <mat-radio-group required aria-label="Select an option" formControlName="gender">
+      <mat-radio-button value="0">Male</mat-radio-button>
+      <mat-radio-button value="1">Female</mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field appearance="outline">
+      <mat-label>Year of birth</mat-label>
+      <input required formControlName="year_of_birth" matInput placeholder="yyyy" pattern="\d\d\d\d"/>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Work start date</mat-label>
+      <input required formControlName="work_start_date" matInput placeholder="dd.mm.yyyy" pattern="(0?[1-9]|[12][0-9]|3[01])\.(0?[1-9]|[1][0-2])\.\d\d\d\d"/>
+    </mat-form-field><br>
+    <mat-radio-group required aria-label="Select an option" formControlName="contract_type">
+      <mat-radio-button value="0">Indefinite</mat-radio-button>
+      <mat-radio-button value="1">Determined</mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field appearance="outline">
+      <mat-label>Contract length</mat-label>
+      <input required formControlName="contract_length" matInput placeholder="Enter length of contract"/>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Department</mat-label>
+      <input required formControlName="department" matInput placeholder="Enter department"/>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Annual leave days</mat-label>
+      <input formControlName="annual_leave_days" matInput placeholder="Number of annual leave days" pattern="(0?[1-9]|[12][0-9]|3[01])"/>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Vacation days</mat-label>
+      <input formControlName="vacation_days" matInput placeholder="Number of vacation days" pattern="(0?[1-9]|[12][0-9]|3[01])"/>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Paid leave days</mat-label>
+      <input formControlName="paid_leave_days" matInput placeholder="Number of paid leave days" pattern="(0?[1-9]|[12][0-9]|3[01])"/>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close="">Close</button>
+  <button mat-raised-button color="primary"  [disabled]="addForm.invalid" (click)="addEmployee()">Add</button>
+</div>
+
+

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { AddComponent } from './add/add.component';
 import { DetailComponent } from './detail/detail.component';
 import { Employee } from './employee';
 import { EmployeeService } from './employee.service';
@@ -40,6 +41,14 @@ export class AppComponent implements OnInit{
       }
       );
   }
+  add(){
+    this.dialog.open(AddComponent, {
+        width: '30%',
+        data:this.dataSource
+    }
+    )
+  }
+
   viewdetails(employee: any){
     this.dialog.open(DetailComponent, {
       width: '30%',
@@ -53,5 +62,4 @@ export class AppComponent implements OnInit{
         return this.employeeService.getEmployees().subscribe(res => this.dataSource.data=res)
       }
     );}
-
 }
