@@ -10,6 +10,13 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { DetailComponent } from './detail/detail.component';
 import { MatDialogModule } from "@angular/material/dialog";
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatGridListModule } from "@angular/material/grid-list";
+import { MatInputModule } from "@angular/material/input";
+import { MatSortModule } from '@angular/material/sort';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -25,7 +32,15 @@ import { MatDialogModule } from "@angular/material/dialog";
     MatButtonModule,
     MatIconModule,
     MatPaginatorModule,
-    MatDialogModule
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatGridListModule,
+    MatInputModule,
+    MatSortModule,
+    MatSelectModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,20 @@
+
+.name{
+  width: 45%;
+  float:left;
+}
+.example-card {
+  float:right;
+  width: 45%;
+}
+img {
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.desno{
+  width:50%;
+  padding-top:55px;
+  float:right;
+}

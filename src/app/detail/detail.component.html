@@ -1,1 +1,62 @@
-<p>detail works!</p>
+<div class="sve">
+<h1 mat-dialog-title>Details</h1>
+<div mat-dialog-content>
+  <form [formGroup]="projectForm" #form2="ngForm">
+    <div class="name">
+    <mat-form-field appearance="outline">
+      <mat-label>First name</mat-label>
+      <input formControlName="firstName" [readonly]="true" matInput placeholder="" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Last name</mat-label>
+      <input formControlName="lastName" [readonly]="true" matInput placeholder="" />
+    </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Gender</mat-label>
+        <input formControlName="gender" [readonly]="true" matInput placeholder="" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Year of birth</mat-label>
+        <input formControlName="year_of_birth" [readonly]="true" matInput placeholder="" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Work start date</mat-label>
+        <input formControlName="work_start_date" [readonly]="true" matInput placeholder="" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Contract type</mat-label>
+        <input formControlName="contract_type" [readonly]="true" matInput placeholder="" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Contract length</mat-label>
+        <input formControlName="contract_length" [readonly]="true" matInput placeholder="" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Department</mat-label>
+        <input formControlName="department" [readonly]="true" matInput placeholder="" />
+      </mat-form-field>
+    </div>
+    <mat-card class="example-card" >
+        <img mat-card-xl-image [src]="pictureUrl" alt="">
+    </mat-card>
+    <div class="desno">
+    <mat-form-field appearance="outline" *ngIf=ald>
+      <mat-label>Annual leave days</mat-label>
+      <input formControlName="annual_leave_days" [readonly]="true" matInput placeholder="" />
+    </mat-form-field>
+      <mat-form-field appearance="outline" *ngIf=vd>
+        <mat-label>Vacation days</mat-label>
+        <input formControlName="vacation_days" [readonly]="true" matInput placeholder="" />
+      </mat-form-field>
+      <mat-form-field appearance="outline" *ngIf=pld>
+        <mat-label>Paid leave days</mat-label>
+        <input formControlName="paid_leave_days" [readonly]="true" matInput placeholder="" />
+      </mat-form-field>
+    </div>
+   <!--<img mat-card-avatar [src]="pictureUrl" alt="" height="200" width="200" style="float:right">-->
+  </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close="">Close</button>
+</div>
+</div>

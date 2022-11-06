@@ -24,3 +24,6 @@ th.mat-header-cell {
 td{
   text-align: center;
 }
+.dodajGumb {
+  margin-left: 20px;
+}
