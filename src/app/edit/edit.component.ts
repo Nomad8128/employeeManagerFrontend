@@ -54,7 +54,7 @@ export class EditComponent implements OnInit {
         this.projectForm.controls['annual_leave_days'].setValue("");
         this.ald = this.data.worker.annual_leave_days;
       }
-      if (this.data.vacation_days) {
+      if (this.data.worker.vacation_days) {
         this.projectForm.controls['vacation_days'].setValue(this.data.worker.vacation_days);
         this.vd = this.data.worker.vacation_days;
       } else if (!this.data.worker.vacation_days) {
