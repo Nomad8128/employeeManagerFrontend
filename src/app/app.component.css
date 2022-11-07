@@ -27,3 +27,15 @@ td{
 .dodajGumb {
   margin-left: 20px;
 }
+.mat-form-field {
+  justify-content: right;
+  display: flex;
+  font-size: 14px;
+  width: 100%;
+}
+::ng-deep .mat-sort-header-container {
+  display:flex;
+  text-align: center;
+  justify-content:center;
+}
+
