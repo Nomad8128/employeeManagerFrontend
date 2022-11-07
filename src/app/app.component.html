@@ -10,7 +10,7 @@
   <input matInput (keyup)="applyFilter($event)" placeholder="" #input>
 </mat-form-field>
 
-<table mat-table [dataSource]="dataSource"  class="mat-elevation-z8, full-width-table" matSort>
+<table mat-table [dataSource]="dataSource"  class="mat-elevation-z8, full-width-table" matSort matTableExporter #exporter="matTableExporter" [hiddenColumns]="[3]">
 
   <ng-container matColumnDef="firstName">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> First name </th>
@@ -45,6 +45,9 @@
                [pageSizeOptions]="[1, 2, 5, 10, 20]"
                aria-label="Select page">
 </mat-paginator>
+
+<button mat-raised-button color="primary" class="start-button" (click)="exporter.exportTable('xlsx', {fileName:'Projects'})">Export to excel</button>
+
 
 <!--
 <div *ngFor="let employee of employees">

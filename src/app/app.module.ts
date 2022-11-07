@@ -20,6 +20,7 @@ import { MatCardModule } from '@angular/material/card';
 import { AddComponent } from './add/add.component';
 import { MatRadioModule } from '@angular/material/radio';
 import { EditComponent } from './edit/edit.component';
+import { MatTableExporterModule } from 'mat-table-exporter';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { EditComponent } from './edit/edit.component';
     MatSortModule,
     MatSelectModule,
     MatCardModule,
-    MatRadioModule
+    MatRadioModule,
+    MatTableExporterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
